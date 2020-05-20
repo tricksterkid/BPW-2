@@ -41,7 +41,7 @@ TagManager:
   - name: Background
     uniqueID: 3738843413
     locked: 0
-  - name: Platforms
+  - name: Triggers
     uniqueID: 1398771795
     locked: 0
   - name: Enemies
