@@ -44,9 +44,6 @@ TagManager:
   - name: Triggers
     uniqueID: 1398771795
     locked: 0
-  - name: Enemies
-    uniqueID: 3341640379
-    locked: 0
   - name: Player
     uniqueID: 4156203933
     locked: 0
