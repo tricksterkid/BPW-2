@@ -9,15 +9,12 @@ public class StartScreenLight : MonoBehaviour
     {
         standardLight.SetActive(false);
         specialLight.SetActive(true);
-
-        Debug.Log("Changed lighting to special");
     }
 
     void OnMouseExit()
     {
-        standardLight.SetActive(true);
         specialLight.SetActive(false);
-        Debug.Log("Changed lighting to normal");
+        standardLight.SetActive(true);
     }
 
 }

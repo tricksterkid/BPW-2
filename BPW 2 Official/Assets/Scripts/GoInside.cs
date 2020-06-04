@@ -8,7 +8,6 @@ public class GoInside : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("Level01");
-            Debug.Log("You went inside");
         }
     }
 }

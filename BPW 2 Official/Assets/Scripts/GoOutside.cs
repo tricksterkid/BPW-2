@@ -8,7 +8,6 @@ public class GoOutside : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene("Level02");
-            Debug.Log("You went outside");
         }
     }
 }

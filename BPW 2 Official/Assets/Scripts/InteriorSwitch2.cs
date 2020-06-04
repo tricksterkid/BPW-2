@@ -2,17 +2,36 @@
 
 public class InteriorSwitch2 : MonoBehaviour
 {
+    bool TriggerSwitch = false;
+
     public GameObject interior1;
     public GameObject interior2;
+    public GameObject popup;
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (other.gameObject.CompareTag("Player"))
         {
-            interior1.SetActive(true);
-            interior2.SetActive(false);
-            Debug.Log("Switched to interior 1");
+            TriggerSwitch = true;
+            popup.SetActive(true);
         }
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        TriggerSwitch = false;
+        popup.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (TriggerSwitch == true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                interior1.SetActive(true);
+                interior2.SetActive(false);
+            }
+        }
+    }
 }
