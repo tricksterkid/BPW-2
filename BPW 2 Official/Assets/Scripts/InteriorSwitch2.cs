@@ -29,8 +29,8 @@ public class InteriorSwitch2 : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                interior1.SetActive(true);
                 interior2.SetActive(false);
+                interior1.SetActive(true);
             }
         }
     }
