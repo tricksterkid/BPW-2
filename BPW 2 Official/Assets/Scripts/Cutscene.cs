@@ -13,12 +13,14 @@ public class Cutscene : MonoBehaviour
     private Animation cam;
     private Animation playerMove;
     private Animation playerJump;
+    private Animation playerDissolve;
 
     void Start()
     {
         cam = Camera.GetComponent<Animation>();
         playerMove = Player.GetComponent<Animation>();
         playerJump = Player.GetComponent<Animation>();
+        playerDissolve = Player.GetComponent<Animation>();
         StartCoroutine(CutscenePlay());
     }
 
@@ -35,6 +37,8 @@ public class Cutscene : MonoBehaviour
         Text2.SetActive(true);
         yield return new WaitForSeconds(2);
         Text2.SetActive(false);
+        yield return new WaitForSeconds(2);
+        playerDissolve.Play("CharacterDissolve");
         yield return new WaitForSeconds(2);
         Text3.SetActive(true);
     }
