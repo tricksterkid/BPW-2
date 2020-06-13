@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: e7bd5e94ab62f7d439964b084eac2d87,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1123,6 +1123,7 @@ GameObject:
   - component: {fileID: 719841296}
   - component: {fileID: 719841295}
   - component: {fileID: 719841299}
+  - component: {fileID: 719841300}
   m_Layer: 0
   m_Name: Sprite Player
   m_TagString: Player
@@ -1144,6 +1145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 4
   rigidBody: {fileID: 719841296}
+  animator: {fileID: 719841300}
 --- !u!50 &719841296
 Rigidbody2D:
   serializedVersion: 4
@@ -1255,6 +1257,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
   m_EdgeRadius: 0
+--- !u!95 &719841300
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719841294}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5bd0768f02d576f48b1f604547acc1a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1187950847
 GameObject:
   m_ObjectHideFlags: 0
